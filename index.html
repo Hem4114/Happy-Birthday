@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Didi</title>
+  <style>
+    body {
+      background: #000;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .garden {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin-top: 40px;
+    }
+
+    .flower-container {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .flower {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      animation: spin 10s linear infinite;
+    }
+
+    .petal {
+      width: 60px;
+      height: 60px;
+      background: pink;
+      border-radius: 50% 50% 0 0;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      transform-origin: bottom center;
+    }
+
+    .petal:nth-child(1) { transform: rotate(0deg); }
+    .petal:nth-child(2) { transform: rotate(60deg); }
+    .petal:nth-child(3) { transform: rotate(120deg); }
+    .petal:nth-child(4) { transform: rotate(180deg); }
+    .petal:nth-child(5) { transform: rotate(240deg); }
+    .petal:nth-child(6) { transform: rotate(300deg); }
+
+    .center {
+      width: 40px;
+      height: 40px;
+      background: yellow;
+      border-radius: 50%;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      box-shadow: 0 0 15px yellow;
+    }
+
+    .stem {
+      width: 10px;
+      height: 100px;
+      background: green;
+      margin-top: -10px;
+      border-radius: 5px;
+      animation: grow 3s ease-out forwards;
+      transform-origin: top center;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes grow {
+      from { height: 0; opacity: 0; }
+      to { height: 100px; opacity: 1; }
+    }
+
+    /* Flower positions */
+    .f1 { top: 0; left: 150px; }
+    .f2 { top: 50px; left: 275px; }
+    .f3 { top: 175px; left: 300px; }
+    .f4 { top: 300px; left: 225px; }
+    .f5 { top: 325px; left: 100px; }
+    .f6 { top: 250px; left: 0; }
+    .f7 { top: 125px; left: -20px; }
+    .f8 { top: 30px; left: 50px; }
+
+    /* Petal colors */
+    .f1 .petal { background: #ff6f61; }
+    .f2 .petal { background: #ffcc00; }
+    .f3 .petal { background: #66cc66; }
+    .f4 .petal { background: #66ccff; }
+    .f5 .petal { background: #cc99ff; }
+    .f6 .petal { background: #ff99cc; }
+    .f7 .petal { background: #ff9966; }
+    .f8 .petal { background: #99ffff; }
+
+    /* Birthday Message */
+    .message {
+      margin-top: 100px;
+      font-size: 2.2rem;
+      color: #ff69b4;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+      animation: fadeInBounce 2s ease-out 1, glow 2s ease-in-out infinite alternate;
+      text-align: center;
+    }
+
+    @keyframes fadeInBounce {
+      0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.05);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+      }
+      to {
+        text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="garden">
+    <!-- 8 animated flowers with colorful petals -->
+    <div class="flower-container f1"><div class="flower">
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="center"></div></div><div class="stem"></div></div>
+
+    <div class="flower-container f2"><div class="flower">
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="center"></div></div><div class="stem"></div></div>
+
+    <div class="flower-container f3"><div class="flower">
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="center"></div></div><div class="stem"></div></div>
+
+    <div class="flower-container f4"><div class="flower">
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="center"></div></div><div class="stem"></div></div>
+
+    <div class="flower-container f5"><div class="flower">
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="center"></div></div><div class="stem"></div></div>
+
+    <div class="flower-container f6"><div class="flower">
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="center"></div></div><div class="stem"></div></div>
+
+    <div class="flower-container f7"><div class="flower">
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="center"></div></div><div class="stem"></div></div>
+
+    <div class="flower-container f8"><div class="flower">
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+      <div class="center"></div></div><div class="stem"></div></div>
+  </div>
+
+  <div class="message">Happy Birthday Maitri 🥰</div>
+  <div class="message">Enjoy your rest of the day(Night)</div>
+</body>
+</html>
